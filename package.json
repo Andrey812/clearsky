@@ -1,0 +1,18 @@
+{
+  "main": "html/index.html",
+  "name": "Clear sky",
+  "description": "Clear sky keyboard game",
+    "keywords": [ "clearsky", "Clear sky", "keyboard game" ],
+  "window": {
+    "title": "Clear sky",
+    "icon": "app_icon.png",
+    "toolbar": true,
+    "frame": true,
+    "width": 900,
+    "height": 900,
+    "min_width": 900,
+    "min_height": 900,
+    "max_width": 900,
+    "max_height": 900
+  }
+}
