@@ -1,16 +1,17 @@
 # clearsky
 Clear Sky
 
-The game written using node-wibkit.
+The game written using node-webkit.
 There is map splitted to the several fields like a grid.
 Every field consists some random generated text.
-There is player's base in the bottom of the field and enemies
+
+There are player's base in the bottom of the map and enemies
 which moves around of the map and launches missles to the base.
 
 The main idea of the game is destroying enemies by typing
-text, displayed in the bottom if each map's cell.
+text displayed in the each map's field.
 
-If player will type all letters of the cell's text,
+If player will type all letters of the fields's text,
 the strike will be made to this field and the strike
 will damage or destroy all enemies which are moving
 in the border of the cell.
