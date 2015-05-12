@@ -6,7 +6,7 @@ There is map splitted to the several fields like a grid.
 Every field consists some random generated text.
 
 There are player's base in the bottom of the map and enemies
-which moves around of the map and launches missles to the base.
+which moves around of the map and launches missiles to the base.
 
 The main idea of the game is destroying enemies by typing
 text displayed in the each map's field.
@@ -17,12 +17,12 @@ will damage or destroy all enemies which are moving
 in the border of the cell.
 
 The graphics of the game was made like a radar's screen.
-All enemies are aircrafts - planes, helicopters, missles etc.
+All enemies are aircrafts - planes, helicopters, missiles etc.
 
 The base in the bottom of the map is the player's land, which
 attaked by enemy aircrafts.
 
-Player must destroy all enemies before they will launch count of missles
+Player must destroy all enemies before they will launch count of missiles
 for destroying of the player's base.
 
 Author of the idea, pictures and code: Andrey Nikolaev
