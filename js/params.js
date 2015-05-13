@@ -16,7 +16,7 @@ var params = {
         'height_fields': 4,
         'field_width': 200,
         'field_height': 200,
-        'field_text_length': 8,
+        'field_text_length': 4,
         'field_text_color': '#00aa00',
         'field_text_typed_color': '#00ff00',
         'field_text_font': '20px bold',
@@ -41,7 +41,7 @@ var params = {
         }
     },
     'enemy': {
-        'count': 1,             // Count of the enemies, attacking in the one time
+        'count': 4,             // Count of the enemies, attacking in the one time
         'speed': 2,             // Speed of the enemy (px/loop)
         'random_turn': 20,      // Chance of the turn in the current loop
         'random_fire': 8,       // Chance of the fire in the current loop

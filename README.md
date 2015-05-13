@@ -25,6 +25,11 @@ attaked by enemy aircrafts.
 Player must destroy all enemies before they will launch count of missiles
 for destroying of the player's base.
 
+How to execute:
+- Open index.html in the browser with WebKit (or its fork - Blink) engine (Ex: Chromium browser)
+OR
+- Install node-webkit (https://github.com/nwjs/nw.js) and run "./nw 'path to clearsky directory'"
+
 Author of the idea, pictures and code: Andrey Nikolaev
 Email: morsml@yandex.ru
 

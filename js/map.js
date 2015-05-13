@@ -120,13 +120,16 @@ function field(id, x, y) {
 
     this.hit = function() {
         this.draw_text();
+        this.img = get_picture_by_id('map_field_strike');
         global.field_hit = this;
+        this.draw();
     }
 
     this.unhit = function() {
         this.text_typed = 0;
         this.draw_text();
         this.text = gen_text(params.map.field_text_length);
+        this.img = get_picture_by_id('map_field');
 
         delete global.field_hit;
     }
