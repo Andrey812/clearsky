@@ -20,11 +20,11 @@ function load_pictures() {
 
     // Initialize surface
     global.surface = document.getElementById("map").getContext("2d");
-    global.surface.font = params.map.cell_text_font,
+    global.surface.font = params.map.field_text_font,
 
     // Calculate width and height of the map in pixels
-    global.map_width = params.map.width_cells * params.map.cell_width;
-    global.map_height = params.map.height_cells * params.map.cell_height;
+    global.map_width = params.map.width_fields * params.map.field_width;
+    global.map_height = params.map.height_fields * params.map.field_height;
 
     // Load pictures
     for (i in params.pictures.list) {

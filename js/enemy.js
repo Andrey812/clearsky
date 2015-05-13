@@ -83,7 +83,7 @@ function enemy() {
             this.fire();
         }
 
-        if (this.direction == 'down' && this.y > global.map_height - params.map.cell_height / 2)
+        if (this.direction == 'down' && this.y > global.map_height - params.map.field_height / 2)
         {
             this.direction = 'right';
             this.img = get_picture_by_id('enemy_heli_right');
@@ -114,8 +114,8 @@ function enemy() {
 
     // Detect map's firezone
     this.is_firezone = function() {
-        var t_brd = global.map_height - params.map.cell_height * 2; // top border
-        var b_brd = global.map_height - params.map.cell_height; // bottom border
+        var t_brd = global.map_height - params.map.field_height * 2; // top border
+        var b_brd = global.map_height - params.map.field_height; // bottom border
 
         if (this.y > t_brd && this.y < b_brd) {
             return 1;
@@ -124,7 +124,7 @@ function enemy() {
 
     // Detect fields, where this object is nested
     this.nested_field = function() {
-        return params.map.width_cells * parseInt(this.y / params.map.cell_height)
-            + parseInt(this.x / params.map.cell_width);
+        return params.map.width_fields * parseInt(this.y / params.map.field_height)
+            + parseInt(this.x / params.map.field_width);
     }
 }

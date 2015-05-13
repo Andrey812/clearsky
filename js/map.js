@@ -3,7 +3,7 @@
     The module consists object 'map', its methods and related common functions.
 
     The 'map' is a game field which consists other objects - enemies, missles,
-    smaller fields (map cells) etc.
+    smaller fields (map fields) etc.
 
     Please, read of the readme file about game description and structure.
 
@@ -14,8 +14,8 @@
 // Common map functions
 function map_initialize() {
     global.map = new map(
-        params.map.width_cells,
-        params.map.height_cells
+        params.map.width_fields,
+        params.map.height_fields
     );
 
     global.map.draw();
@@ -64,13 +64,13 @@ function map(width, height) {
 
     var id = 0;
 
-    var map_cell = get_picture_by_id('map_cell');
+    var map_field = get_picture_by_id('map_field');
 
     for (hi = 0; hi < this.height; hi++) {
         for (wi = 0; wi < this.width; wi++) {
 
-            var x_pos = wi * (map_cell.width - 1);
-            var y_pos = hi * (map_cell.height - 1);
+            var x_pos = wi * (map_field.width - 1);
+            var y_pos = hi * (map_field.height - 1);
 
             var f = new field(id++, x_pos, y_pos);
 
@@ -90,17 +90,17 @@ function map(width, height) {
 }
 
 // Object "Field"
-// Fields are cells of the map
+// Fields are fields of the map
 function field(id, x, y) {
 
     this.id = id;
     this.x = x;
     this.y = y;
 
-    this.img = get_picture_by_id('map_cell', 0);
+    this.img = get_picture_by_id('map_field');
 
     this.text_typed = 0;
-    this.text = gen_text(params.map.cell_text_length);
+    this.text = gen_text(params.map.field_text_length);
 
     this.draw = function() {
         global.surface.drawImage(this.img, this.x, this.y);
@@ -108,13 +108,13 @@ function field(id, x, y) {
     };
 
     this.draw_text = function() {
-        global.surface.fillStyle = params.map.cell_text_color;
-        global.surface.fillText(this.text, this.x + 10, (this.y + params.map.cell_height - 10) );
+        global.surface.fillStyle = params.map.field_text_color;
+        global.surface.fillText(this.text, this.x + 10, (this.y + params.map.field_height - 10) );
 
         if (this.text_typed) {
-            global.surface.fillStyle = params.map.cell_text_typed_color;
+            global.surface.fillStyle = params.map.field_text_typed_color;
             global.surface.fillText(this.text.slice(0,this.text_typed)
-                , this.x + 10, (this.y + params.map.cell_height - 10) );
+                , this.x + 10, (this.y + params.map.field_height - 10) );
         }
     }
 
@@ -126,7 +126,7 @@ function field(id, x, y) {
     this.unhit = function() {
         this.text_typed = 0;
         this.draw_text();
-        this.text = gen_text(params.map.cell_text_length);
+        this.text = gen_text(params.map.field_text_length);
 
         delete global.field_hit;
     }

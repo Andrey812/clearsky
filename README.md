@@ -14,7 +14,7 @@ text displayed in the each map's field.
 If player will type all letters of the fields's text,
 the strike will be made to this field and the strike
 will damage or destroy all enemies which are moving
-in the border of the cell.
+in the border of the field.
 
 The graphics of the game was made like a radar's screen.
 All enemies are aircrafts - planes, helicopters, missiles etc.

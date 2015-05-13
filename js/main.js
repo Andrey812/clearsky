@@ -29,6 +29,7 @@ load_pictures();
 // Wait for picture loading
 var pic_load_waiter = setInterval(function () {
     if (global.pictures_loaded_cnt == global.common_pictures_cnt) {
+
         initial_start();
         clearInterval(pic_load_waiter);
     };
