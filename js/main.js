@@ -17,11 +17,11 @@ to this in the process of application work
 var global = {
     'pictures'              : {},           // Collection of the pictures
     'enemies'               : {},           // Collection of the objects, enemies
-    'missles'               : {},           // Collection of the objects, missles
+    'missiles'               : {},           // Collection of the objects, missiles
     'common_pictures_cnt'   : 0,            // Count of the pictures
     'pictures_loaded_cnt'   : 0,            // Count of the loaded pictures
     'enemy_id'              : 0,            // ID of the enemy in the collection of the enemies
-    'missle_id'             : 0             // ID of the missle in the collection of the missles
+    'missile_id'             : 0             // ID of the missile in the collection of the missiles
 }
 
 load_pictures();
@@ -54,7 +54,7 @@ function main_loop() {
         clear_screen();
 
         process_enemies();
-        process_missles();
+        process_missiles();
 
         process_map();
     }, params.enemy.loop_timer);

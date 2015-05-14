@@ -35,8 +35,8 @@ var params = {
             'enemy_heli' : {
                 'sprites': ['enemy_heli_down', 'enemy_heli_up', 'enemy_heli_left', 'enemy_heli_right']
             },
-            'enemy_missle' : {
-                'sprites': ['enemy_missle']
+            'enemy_missile' : {
+                'sprites': ['enemy_missile']
             }
         }
     },
@@ -45,7 +45,7 @@ var params = {
         'speed': 2,             // Speed of the enemy (px/loop)
         'random_turn': 20,      // Chance of the turn in the current loop
         'random_fire': 8,       // Chance of the fire in the current loop
-        'missle_speed': 12,     // Speed of the missle (px/loop)
+        'missile_speed': 12,    // Speed of the missile (px/loop)
         'loop_timer': 50,       // Process game loop timer (ms)
         'gate_height': 50,      // Height of the appearing and disappearing of enemies
         'appear_rate': 9,       // Chance of the enemy appear in the current loop

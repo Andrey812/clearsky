@@ -4,7 +4,7 @@
     related common functions.
 
     The 'enemy' moves around the map and tries to attack the base of the player
-    launching missles to the bottom of the map.
+    launching missiles to the bottom of the map.
 
     Please, read of the readme file about game description and structure.
 
@@ -63,11 +63,11 @@ function enemy() {
     this.fired = 0;
     this.destroyed = 0;
 
-    // Release the missle
+    // Release the missile
     this.fire = function() {
         var fire_point = get_picture_center(this.x, this.y, this.img);
 
-        global.missles[global.missle_id++] = new missle(fire_point[0], fire_point[1]);
+        global.missiles[global.missile_id++] = new missile(fire_point[0], fire_point[1]);
         this.fired = 1;
     }
 

@@ -2,7 +2,7 @@
     This code is part of the node-webkit project, the game named 'Clear Sky'.
     The module consists object 'map', its methods and related common functions.
 
-    The 'map' is a game field which consists other objects - enemies, missles,
+    The 'map' is a game field which consists other objects - enemies, missiles,
     smaller fields (map fields) etc.
 
     Please, read of the readme file about game description and structure.
