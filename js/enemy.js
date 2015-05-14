@@ -28,7 +28,8 @@ function process_enemies() {
 
         // Detect hit
         if (global.field_hit) {
-            if (global.field_hit.id == enemy.nested_field()) {
+            var nested_fields = enemy.nested_fields();
+            if (nested_fields[global.field_hit.id]) {
                 enemy.destroyed = 1;
             }
         }
@@ -123,8 +124,27 @@ function enemy() {
     }
 
     // Detect fields, where this object is nested
-    this.nested_field = function() {
-        return params.map.width_fields * parseInt(this.y / params.map.field_height)
-            + parseInt(this.x / params.map.field_width);
+    this.nested_fields = function() {
+        var fields = {};
+
+        // top:left point
+        fields[point_nested_field(this.x, this.y)] = 1;
+
+        // top:right point
+        fields[point_nested_field(this.x + this.img.width, this.y)] = 1;
+
+        // bottom:left point
+        fields[point_nested_field(this.x, this.y + this.img.height)] = 1;
+
+        // bottom:right point
+        fields[point_nested_field(this.x + this.img.width, this.y + this.img.height)] = 1;
+
+        return fields;
     }
+}
+
+// Return nested field for point
+function point_nested_field(x, y) {
+        return params.map.width_fields * parseInt(y / params.map.field_height)
+            + parseInt(x / params.map.field_width);
 }
