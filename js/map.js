@@ -64,15 +64,13 @@ function map(width, height) {
 
     var id = 0;
 
-    var map_field = get_picture_by_id('map_field');
-
     for (hi = 0; hi < this.height; hi++) {
         for (wi = 0; wi < this.width; wi++) {
 
-            var x_pos = wi * (map_field.width - 1);
-            var y_pos = hi * (map_field.height - 1);
+            var x_pos = wi * (params.map.field_width - 1);
+            var y_pos = hi * (params.map.field_height - 1);
 
-            var f = new field(id++, x_pos, y_pos);
+            var f = new field(id++, x_pos, y_pos, (hi == this.height - 1 ? 1 : 0));
 
             this.fields.push(f);
         }
@@ -91,13 +89,16 @@ function map(width, height) {
 
 // Object "Field"
 // Fields are fields of the map
-function field(id, x, y) {
+function field(id, x, y, base_fld) {
 
     this.id = id;
     this.x = x;
     this.y = y;
+    this.base_fld = base_fld;
 
-    this.img = get_picture_by_id('map_field');
+    // Picture of the map field
+    // Base field - the field in the bottom row of the map
+    this.img = get_picture_by_id(base_fld ? 'map_field_base' : 'map_field');
 
     this.text_typed = 0;
     this.text = gen_text(params.map.field_text_length);
@@ -129,7 +130,7 @@ function field(id, x, y) {
         this.text_typed = 0;
         this.draw_text();
         this.text = gen_text(params.map.field_text_length);
-        this.img = get_picture_by_id('map_field');
+        this.img = get_picture_by_id(this.base_fld ? 'map_field_base' : 'map_field');
 
         delete global.field_hit;
     }

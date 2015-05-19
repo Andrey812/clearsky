@@ -17,11 +17,11 @@ to this in the process of application work
 var global = {
     'pictures'              : {},           // Collection of the pictures
     'enemies'               : {},           // Collection of the objects, enemies
-    'missiles'               : {},           // Collection of the objects, missiles
+    'missiles'              : {},           // Collection of the objects, missiles
     'common_pictures_cnt'   : 0,            // Count of the pictures
     'pictures_loaded_cnt'   : 0,            // Count of the loaded pictures
     'enemy_id'              : 0,            // ID of the enemy in the collection of the enemies
-    'missile_id'             : 0             // ID of the missile in the collection of the missiles
+    'missile_id'            : 0             // ID of the missile in the collection of the missiles
 }
 
 load_pictures();
