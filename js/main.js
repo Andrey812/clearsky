@@ -41,6 +41,9 @@ function initial_start() {
     map_initialize();
     main_loop();
 
+    //Set base health
+    global.base_health = params.gameplay.base_health;
+
     // Key press detection
     addEventListener("keypress", function(e){
         check_typed(String.fromCharCode(e.keyCode));
@@ -58,6 +61,14 @@ function main_loop() {
 
         process_map();
     }, params.enemy.loop_timer);
+}
+
+function base_hit() {
+    global.base_health--;
+    if (global.base_health == 0) {
+        alert('GAME OVER');
+        global.base_health = params.gameplay.base_health;
+    }
 }
 
 function gen_random(min, max) {

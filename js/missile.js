@@ -16,8 +16,9 @@
 function process_missiles() {
     for (i in global.missiles) {
         var missile = global.missiles[i];
-        if (missile.y > global.map_height - 20)
+        if (missile.y > global.map_height - 50)
         {
+            base_hit();
             delete global.missiles[i];
         }
         else {

@@ -30,7 +30,7 @@ var params = {
         },
         'list': {
             'map_field' : {
-                'sprites': ['map_field', 'map_field_strike', 'map_field_base'],
+                'sprites': ['map_field', 'map_field_strike', 'map_field_base', 'map_field_base_strike'],
             },
             'enemy_heli' : {
                 'sprites': ['enemy_heli_down', 'enemy_heli_up', 'enemy_heli_left', 'enemy_heli_right']
@@ -50,6 +50,9 @@ var params = {
         'gate_height': 50,      // Height of the appearing and disappearing of enemies
         'appear_rate': 9,       // Chance of the enemy appear in the current loop
         'appear_margin': 100    // Left and right margin of the enemy's appearing
+    },
+    'gameplay' : {
+        'base_health' : 3,
     }
 };
 
