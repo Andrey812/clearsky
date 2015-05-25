@@ -70,7 +70,7 @@ function map(width, height) {
             var x_pos = wi * (params.map.field_width - 1);
             var y_pos = hi * (params.map.field_height - 1);
 
-            var f = new field(id++, x_pos, y_pos, (hi == this.height - 1 ? 1 : 0));
+            var f = new field(id++, x_pos, y_pos);
 
             this.fields.push(f);
         }

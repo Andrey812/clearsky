@@ -16,9 +16,11 @@
 function process_missiles() {
     for (i in global.missiles) {
         var missile = global.missiles[i];
-        if (missile.y > global.map_height - 50)
+        var missile_center = get_picture_center(missile.x, missile.y, missile.img);
+
+        if (missile_center[1] > global.base_strike_y)
         {
-            base_hit();
+            global.base.hit();
             delete global.missiles[i];
         }
         else {

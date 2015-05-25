@@ -38,11 +38,10 @@ var pic_load_waiter = setInterval(function () {
 // Initial start of the screen (draw map and set up state of the engine)
 function initial_start() {
 
+    base_initialize();
     map_initialize();
-    main_loop();
 
-    //Set base health
-    global.base_health = params.gameplay.base_health;
+    main_loop();
 
     // Key press detection
     addEventListener("keypress", function(e){
@@ -56,19 +55,13 @@ function main_loop() {
 
         clear_screen();
 
+        global.base.draw();
+
         process_enemies();
         process_missiles();
 
         process_map();
     }, params.enemy.loop_timer);
-}
-
-function base_hit() {
-    global.base_health--;
-    if (global.base_health == 0) {
-        alert('GAME OVER');
-        global.base_health = params.gameplay.base_health;
-    }
 }
 
 function gen_random(min, max) {
