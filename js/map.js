@@ -89,16 +89,15 @@ function map(width, height) {
 
 // Object "Field"
 // Fields are fields of the map
-function field(id, x, y, base_fld) {
+function field(id, x, y) {
 
     this.id = id;
     this.x = x;
     this.y = y;
-    this.base_fld = base_fld;
 
     // Picture of the map field
     // Base field - the field in the bottom row of the map
-    this.img = get_picture_by_id(base_fld ? 'map_field_base' : 'map_field');
+    this.img = get_picture_by_id('map_field');
 
     this.text_typed = 0;
     this.text = gen_text(params.map.field_text_length);
@@ -130,7 +129,7 @@ function field(id, x, y, base_fld) {
         this.text_typed = 0;
         this.draw_text();
         this.text = gen_text(params.map.field_text_length);
-        this.img = get_picture_by_id(this.base_fld ? 'map_field_base' : 'map_field');
+        this.img = get_picture_by_id('map_field');
 
         delete global.field_hit;
     }

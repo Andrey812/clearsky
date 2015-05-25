@@ -30,7 +30,7 @@ var params = {
         },
         'list': {
             'map_field' : {
-                'sprites': ['map_field', 'map_field_strike', 'map_field_base', 'map_field_base_strike'],
+                'sprites': ['map_field', 'map_field_strike'],
             },
             'enemy_heli' : {
                 'sprites': ['enemy_heli_down', 'enemy_heli_up', 'enemy_heli_left', 'enemy_heli_right']
