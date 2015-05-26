@@ -40,6 +40,7 @@ function initial_start() {
 
     base_initialize();
     map_initialize();
+    hud_initialize();
 
     main_loop();
 
@@ -61,6 +62,7 @@ function main_loop() {
         process_missiles();
 
         process_map();
+
     }, params.enemy.loop_timer);
 }
 

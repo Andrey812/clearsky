@@ -52,11 +52,15 @@ var params = {
         'appear_margin' : 100   // Left and right margin of the enemy's appearing
     },
     'base' : {
-        'color'         : '#004400',    // Color of the base's line
+        'color'         : '#004400',    // Color of the base's line (hex)
+        'hit_color'     : '#00ff00',    // Color when base was hit (hex)
         'width'         : 3,            // Width of the base's line (px)
         'health'        : 3,            // Count of the player's base health
         'margin'        : 4,            // Shift accroding left and right map's bordirs (px)
         'field_part'    : 4             // Height of the base's line in the bottom field of the map
+    },
+    'hud': {
+        'text_color': '#c2a366'
     }
 };
 

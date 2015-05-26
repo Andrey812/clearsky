@@ -17,6 +17,8 @@ function base_initialize() {
 
 function base() {
 
+    // When 0 - display normal base's line
+    // When 1 - display base's hit line
     this.hit_state = 0;
 
     // Calculate base's line coordinates
@@ -45,10 +47,12 @@ function base() {
     }
 
     this.hit = function() {
-        global.surface.strokeStyle = '#00ff00';
+        global.surface.strokeStyle = params.base.hit_color;
         this.hit_state = 1;
 
         this.health--;
+
+        global.hud.draw();
 
         if (this.health == 0) {
             alert('GAME OVER');               // TODO
